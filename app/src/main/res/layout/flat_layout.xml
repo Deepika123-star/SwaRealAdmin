@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="5dp"
+    android:elevation="5dp"
+    android:layout_margin="10dp"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/openMyProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:src="@drawable/logo"
+            android:layout_height="100dp"/>
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/dashboardTextView"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/for_text_view"
+            android:text="My Profile" />
+
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

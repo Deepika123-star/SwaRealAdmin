@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/main_toolbar"
+
+        android:id="@+id/abc"/>
+    <ViewFlipper
+        android:id="@+id/viewflip"
+        android:layout_below="@id/abc"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_weight="1"
+        />
+<LinearLayout
+    android:id="@+id/mybusiness"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="2"
+    android:layout_below="@+id/viewflip"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_weight="1"
+        android:text="My Business "
+        android:textAllCaps="true"
+        android:padding="@dimen/text_view_padding"
+        android:layout_margin="@dimen/margin_layout"
+        android:textSize="@dimen/text_size"
+     android:gravity="center_horizontal"
+        android:fontFamily="@font/main_font"
+        android:background="@color/background_color"
+        android:textColor="@color/text_color_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_weight="1"
+        android:text="Current Offer "
+        android:textAllCaps="true"
+        android:layout_margin="@dimen/margin_layout"
+        android:textSize="@dimen/text_size"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/text_view_padding"
+        android:fontFamily="@font/main_font"
+        android:background="@color/background_color"
+        android:textColor="@color/text_color_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ourProjectList"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/mybusiness"
+        tools:listitem="@layout/dashboard_item_layout"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        tools:layout_editor_absoluteX="132dp"
+        tools:layout_editor_absoluteY="78dp"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/mybusiness"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_below="@+id/mybusiness"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/flatcard"
+                        android:layout_width="wrap_content"
+                        app:cardCornerRadius="5dp"
+                        android:elevation="5dp"
+                        android:layout_weight="1"
+                        android:layout_margin="10dp"
+                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp">
+
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:src="@drawable/ic_plot" />
+
+                            <TextView
+
+                                style="@style/dashboardTextView"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:fontFamily="@font/for_text_view"
+                                android:text="Plot" />
+
+                        </RelativeLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="wrap_content"
+                        app:cardCornerRadius="5dp"
+                        android:elevation="5dp"
+                        android:layout_weight="1"
+                        android:layout_margin="10dp"
+                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp">
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/ic_row_houses"
+                                android:layout_height="70dp"/>
+
+                            <TextView
+                                style="@style/dashboardTextView"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:fontFamily="@font/for_text_view"
+                                android:text="Row Houses" />
+
+                        </RelativeLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="wrap_content"
+                        app:cardCornerRadius="5dp"
+                        android:elevation="5dp"
+                        android:layout_weight="1"
+                        android:layout_margin="10dp"
+                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:id="@+id/openMyProfile"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp">
+                            <ImageView
+                                android:id="@+id/productImages"
+                                android:layout_width="70dp"
+                                android:src="@drawable/ic_flat"
+                                android:layout_height="70dp"/>
+
+                            <TextView
+                                android:id="@+id/textView"
+                                style="@style/dashboardTextView"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:fontFamily="@font/for_text_view"
+                                android:text="Flat" />
+
+                        </RelativeLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/abc2"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/abc1"
+                android:gravity="center_horizontal"
+
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="wrap_content"
+                        app:cardCornerRadius="5dp"
+                        android:elevation="5dp"
+                        android:layout_weight="1"
+                        android:layout_margin="10dp"
+                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp">
+                            <ImageView
+                                android:layout_centerHorizontal="true"
+                                android:layout_width="70dp"
+                                android:src="@drawable/ic_wallet"
+                                android:layout_height="70dp"/>
+
+                            <TextView
+
+                                style="@style/dashboardTextView"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:fontFamily="@font/for_text_view"
+                                android:text="My Wallet" />
+
+                        </RelativeLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="wrap_content"
+                        app:cardCornerRadius="5dp"
+                        android:elevation="5dp"
+                        android:layout_weight="1"
+                        android:layout_margin="10dp"
+                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp">
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/ic_associates"
+                                android:layout_height="70dp"/>
+
+                            <TextView
+                                style="@style/dashboardTextView"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:fontFamily="@font/for_text_view"
+                                android:text="My Associate" />
+
+                        </RelativeLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="wrap_content"
+                        app:cardCornerRadius="5dp"
+                        android:elevation="5dp"
+                        android:layout_weight="1"
+                        android:layout_margin="10dp"
+                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp">
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:src="@drawable/ic_customer"
+                                android:layout_centerHorizontal="true"
+                                android:layout_height="70dp"/>
+
+                            <TextView
+                                style="@style/dashboardTextView"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:fontFamily="@font/for_text_view"
+                                android:text="My Customer" />
+
+                        </RelativeLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_below="@+id/abc2"
+                android:gravity="center_horizontal"
+
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="wrap_content"
+                        app:cardCornerRadius="5dp"
+                        android:elevation="5dp"
+                        android:layout_weight="1"
+                        android:layout_margin="10dp"
+                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:id="@+id/flat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp">
+                            <ImageView
+                                android:id="@+id/flatimge"
+                                android:layout_width="70dp"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/ic_total_business"
+                                android:layout_height="70dp"/>
+
+                            <TextView
+
+                                style="@style/dashboardTextView"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:fontFamily="@font/for_text_view"
+                                android:text="Total Business" />
+
+                        </RelativeLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="wrap_content"
+                        app:cardCornerRadius="5dp"
+                        android:elevation="5dp"
+                        android:layout_weight="1"
+                        android:layout_margin="10dp"
+                        android:layout_height="wrap_content">
+                        <RelativeLayout
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp">
+                            <ImageView
+                                android:layout_width="70dp"
+                                android:src="@drawable/ic_discount"
+                                android:layout_centerHorizontal="true"
+                                android:layout_height="70dp"/>
+
+                            <TextView
+                                style="@style/dashboardTextView"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:fontFamily="@font/for_text_view"
+                                android:text="My Business Offer" />
+
+                        </RelativeLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="wrap_content"
+                        app:cardCornerRadius="5dp"
+                        android:elevation="5dp"
+                        android:layout_weight="1"
+                        android:layout_margin="10dp"
+                        android:layout_height="wrap_content">
+                        <RelativeLayout
+
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp">
+                            <ImageView
+                                android:layout_centerHorizontal="true"
+                                android:layout_width="70dp"
+                                android:src="@drawable/ic_reward"
+                                android:layout_height="70dp"/>
+
+                            <TextView
+                                style="@style/dashboardTextView"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:fontFamily="@font/for_text_view"
+                                android:text="My Reward" />
+
+                        </RelativeLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

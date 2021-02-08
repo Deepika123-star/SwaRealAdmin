@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--colors for dark mode-->
+  <!--  <color name="colorPrimary">#FCFCFC</color>
+    <color name="colorPrimaryDark">#2A2E43</color>
+    <color name="colorAccent">#FF402D</color>-->
+
+    <!--colors for light mode-->
+    <color name="contentTextColor">#020000</color>
+    <color name="black">#000000</color>
+    <color name="whiteTextColor">#fff</color>
+    <color name="apptheme1">#F96104</color>
+    <color name="apptheme2">#F96104</color>
+    <color name="apptheme3">#F96104</color>
+    <color name="appthemealpha">#F96104</color>
+
+
+    <color name="colorPrimary">#F96104</color>
+    <color name="colorPrimaryDark">#F96104</color>
+    <color name="colorAccent">#F96104</color>
+
+    <!--colors for modern ui-->
+    <color name="primaryTextColor">#00a5ff</color>
+    <color name="loginBkColor">#f0f0f0</color>
+
+    <!--colros for card-->
+    <color name="whiteCardColor">#fff</color>
+    <color name="text_color_white">#FFFFFF</color>
+    <color name="background_color">#771111</color>
+</resources>

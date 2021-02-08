@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_margin="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="5dp"
+    android:elevation="5dp"
+    android:layout_height="100dp">
+    <RelativeLayout
+        android:id="@+id/openMyProfile"
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content">
+        <View
+            android:id="@+id/view1"
+            android:layout_width="wrap_content"
+            android:background="#E81C2D"
+            android:layout_height="10dp"/>
+<LinearLayout
+    android:id="@+id/flat1View"
+    android:layout_marginTop="10dp"
+    android:layout_below="@+id/view1"
+    android:layout_width="match_parent"
+    android:background="#1E870F"
+    android:gravity="center_horizontal"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/for_text_view"
+        android:padding="5dp"
+        android:text="E1"
+        android:textColor="@color/text_color_white" />
+</LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/flat1View"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:background="#1E870F"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+android:textColor="@color/text_color_white"
+                android:padding="8dp"
+                android:fontFamily="@font/for_text_view"
+                android:text="450 Sq. Ft." />
+        </LinearLayout>
+
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>
